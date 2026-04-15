@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bg-dark: #05070a;
+  --color-panel-bg: rgba(16, 20, 28, 0.85);
+  --color-accent-blue: #00d1ff;
+  --color-accent-green: #00ff85;
+  --color-accent-orange: #ff9f00;
+  --color-accent-red: #ff4b2b;
+  --color-text-main: #e0e6ed;
+  --color-text-dim: #94a3b8;
+  --color-border-dim: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-main font-sans antialiased overflow-hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.glass-panel {
+  @apply bg-panel-bg backdrop-blur-md border border-border-dim;
+}
+
+.map-grid {
+  background-image: radial-gradient(circle at center, #1a202c 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.status-dot {
+  @apply w-2 h-2 rounded-full inline-block mr-1.5;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.risk-badge {
+  @apply inline-block px-3 py-1 rounded font-extrabold text-[10px] uppercase border;
+}
+
+.score-circle {
+  @apply w-24 h-24 border-[6px] border-[#1a202c] rounded-full flex flex-col items-center justify-center;
+}
+

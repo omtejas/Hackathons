@@ -1,0 +1,6 @@
+{
+  "name": "WayOfHeaven: AI SafeRoute Agent",
+  "description": "AI-powered urban mobility safety assistant that analyzes real-time traffic, crime risk, and road conditions to recommend the safest routes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
